@@ -1,0 +1,24 @@
+body {
+  margin-left: 20%;
+  width: 60%;
+}
+
+h1 {
+  display: inline-block;
+  /*float: left;*/
+}
+
+ul.header {
+    padding: 0 0 2px;
+    margin: 0;
+    text-align: right;
+    float: right;
+    margin-top: 35px;
+}
+
+ul #nav_link {
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px;
+}
+
