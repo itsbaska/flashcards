@@ -15,6 +15,12 @@ gem 'rake', '~> 12.0.0'
 
 gem 'shotgun'
 
+gem 'extra_print'
+
+gem 'bcrypt'
+
+gem 'sinatra-flash'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
