@@ -1,0 +1,6 @@
+<% if @correct == true %>
+<h1>Correct!</h1>
+<% else %>
+<h1>You Suck!</h1>
+<% end %>
+<a href="/rounds/<%= @round.id %>/cards/<%= @round.next_card.id %>">Next Question</a>

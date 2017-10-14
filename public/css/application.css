@@ -61,3 +61,16 @@ h3.deck-title a:link {
   color: #729927;
   text-shadow: 1px 1px #4a6319;
 }
+
+table {
+  border: solid 1px #000;
+}
+
+table th {
+  padding: 10px;
+  border: solid 1px #000;
+}
+
+h2.current-user {
+  font-size: 2em;
+}
