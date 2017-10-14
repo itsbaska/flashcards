@@ -2,5 +2,11 @@ class Deck < ApplicationRecord
   has_many :rounds
   has_many :cards
 
-  # self.cards.length
+  def pick_a_card
+    self.cards.sample.id
+  end
+
+
+
 end
+

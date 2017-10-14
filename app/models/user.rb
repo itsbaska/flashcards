@@ -9,15 +9,22 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
 
   def password
-    @password ||= Password.new(encryted_password)
+    @password ||= Password.new(encrypted_password)
   end
 
   def password=(new_password)
     @password = Password.create(new_password)
-    self.encryted_password = @password
+    self.encrypted_password = @password
   end
 
-   def self.authenticate(password)
-    self.password == password
+   def authenticate(username, password)
+    return nil if username == ''
+    user = User.find_by(username: username)
+
+    if user.password == password
+      return user
+    else
+      nil
+    end
   end
 end

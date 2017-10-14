@@ -1,15 +1,8 @@
-<!-- needs right/wrong response -->
+<h2><%= @round.deck.title %></h2>
 
-<h2><%= @deck.title %> Deck</h2>
+<h3><%= @card.question %></h3>
 
-<!-- insert suffle method -->
-<% @cards.each do |card| %>
-  <%= card.question %>
-  <form action="/guess" method="POST">
-    <input type="text" name="user_unstored_guess">
-    <input type="submit" value="submit your guess">
-  </form>
-<% end %>
-
-
-
+<form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post">
+  <input type="text" name="user_guess">
+  <input type="submit" value="Enter Guess">
+</form>
