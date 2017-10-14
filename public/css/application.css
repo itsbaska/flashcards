@@ -22,3 +22,7 @@ ul #nav_link {
     margin-right: 10px;
 }
 
+.error_item {
+  font-variant: small-caps;
+  color: red;
+}
