@@ -70,3 +70,7 @@ table th {
   padding: 10px;
   border: solid 1px #000;
 }
+
+h2.current-user {
+  font-size: 2em;
+}

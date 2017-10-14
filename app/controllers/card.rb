@@ -10,7 +10,9 @@ post '/rounds/:round_id/cards/:id' do
   @guess = Guess.find_by(round_id: params[:round_id], card_id: params[:id])
   @guess.increment!(:count)
 
-  if @guess.check_answer(@user_guess)
+  @correct = @guess.check_answer(@user_guess)
+
+  if @correct
     @guess.correctness = true
     @guess.save
   end
@@ -20,8 +22,9 @@ post '/rounds/:round_id/cards/:id' do
   if @all_false_guesses.count == 0
     redirect "/rounds/#{@round.id}"
   else
-    next_card = @round.next_card
-    redirect "/rounds/#{@round.id}/cards/#{next_card.id}"
+    erb :"/cards/response"
+  #   next_card = @round.next_card
+  #   redirect "/rounds/#{@round.id}/cards/#{next_card.id}"
   end
 
 end

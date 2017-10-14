@@ -1,4 +1,4 @@
-<h2><%= current_user.username %></h2>
+<h2 class="current-user"><%= current_user.username %>'s Scores</h2>
 
 <% @user.rounds.each do |round| %>
   <h3><%= round.deck.title %></h3>
@@ -10,7 +10,7 @@
       <th>Total Guesses</th>
     </tr>
     <tr>
-      <th><%= round.created_at %></th>
+      <th><%= round.format_date %></th>
       <th><%= round.deck.cards.count %></th>
       <th><%= round.count_first_guess %></th>
       <th><%= round.count_total_guesses %></th>

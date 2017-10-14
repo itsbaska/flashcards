@@ -27,4 +27,9 @@ class Round < ApplicationRecord
     self.guesses.reduce(0) {|sum, guess| sum + guess.count }
   end
 
+  def format_date
+    Time.zone = 'Central Time (US & Canada)'
+    self.created_at.in_time_zone
+  end
+
 end
