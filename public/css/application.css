@@ -1,28 +1,63 @@
+html {
+  background-color: #e5eefc;
+}
 body {
   margin-left: 20%;
   width: 60%;
+  text-align: center;
 }
 
-h1 {
+nav ul {
+  padding-left: 0;
+}
+
+nav li {
   display: inline-block;
-  /*float: left;*/
+  padding-right: 15px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
 }
 
-ul.header {
-    padding: 0 0 2px;
-    margin: 0;
-    text-align: right;
-    float: right;
-    margin-top: 35px;
+nav li a {
+  text-decoration: none;
+  color: #729927;
+
 }
 
-ul #nav_link {
-    display: inline-block;
-    list-style: none;
-    margin-right: 10px;
+h1#web-title {
+  font-family: 'Sigmar One', cursive;
+  font-size: 4em;
+}
+
+.deck-title {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px #ffe3c6;
+  width: 275px;
+  height: 150px;
 }
 
 .error_item {
   font-variant: small-caps;
   color: red;
+}
+
+h3.deck-title {
+  font-size: 2em;
+  vertical-align: bottom;
+}
+
+h3.deck-title a {
+  text-decoration: none;
+  font-family: 'Sigmar One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px
+}
+
+h3.deck-title a:link {
+  color: #729927;
+  text-shadow: 1px 1px #4a6319;
 }

@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
+  <head>
+    <!--
+      normalize.css removes cross-browser differences in defaults, e.g.,
+      differences in how form elements appear between Firefox and IE
+      See: http://necolas.github.com/normalize.css/
+    -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!--
+      application.css is where you put your styles
+    -->
+    <link rel="stylesheet" href="/css/application.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Sigmar+One" rel="stylesheet">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js"></script>
 
-  <title></title>
-</head>
-<body>
-  <div id="head">
-    <ul class="header">
-      <li id="nav_link"><a href="/register">register</a></li>
-      <li id="nav_link"><a href="/login">login</a></li>
-      <li id="nav_link"><a href="/">home</a></li>
-    </ul>
-    <h1>Flashcards</h1>
-  </div>
-  <%= erb :'_errors' %>
-  <%= yield %>
-</body>
+    <title></title>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/register">register</a></li>
+        <li><a href="/login">login</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+    <h1 id="web-title">Flashcards</h1>
+  </header>
+  <body>
+    <%= erb :'_errors' %>
+    <%= yield %>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 
-def total_number_of_cards
+# def total_number_of_cards
 
-  total_cards = 
+#   total_cards =
 
-end
+# end
