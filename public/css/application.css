@@ -40,11 +40,15 @@ h1#web-title {
   height: 150px;
 }
 
+.error_item {
+  font-variant: small-caps;
+  color: red;
+}
+
 h3.deck-title {
   font-size: 2em;
   vertical-align: bottom;
 }
-
 
 h3.deck-title a {
   text-decoration: none;
@@ -57,5 +61,3 @@ h3.deck-title a:link {
   color: #729927;
   text-shadow: 1px 1px #4a6319;
 }
-
-
