@@ -1,8 +1,9 @@
-<h2><%= @round.deck.title %></h2>
+<div class="question-container">
+  <h2 class="deck-title-card"><%= @round.deck.title %></h2>
+  <h3 class="card-question" ><%= @card.question %></h3>
+</div>
 
-<h3><%= @card.question %></h3>
-
-<form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post">
+<form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post" class="answer-form">
   <input type="text" name="user_guess">
-  <input type="submit" value="Enter Guess">
+  <input type="submit" value="Enter Guess" class="submit-button">
 </form>

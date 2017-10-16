@@ -74,3 +74,68 @@ table th {
 h2.current-user {
   font-size: 2em;
 }
+
+.deck-title-card {
+  background-color: #729927;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #fff;
+  width: 70%;
+}
+
+h2.deck-title-card {
+  margin: 0;
+}
+
+h3.card-question {
+  margin: 0;
+}
+
+
+.card-question {
+  width: 70%;
+  background-color: white;
+  padding: 10px;
+  margin: 0 auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.question-container {
+  display: block;
+  margin: 30px;
+}
+
+.logout-button {
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: #729927;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.answer-form {
+  margin: 30px;
+}
+input[type=submit].submit-button {
+  background-color: #729927;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+input[type=text] {
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}

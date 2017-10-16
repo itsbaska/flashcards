@@ -21,17 +21,19 @@
   <header>
     <nav>
       <ul>
+        <li><a href="/">home</a></li>
         <% if logged_in? %>
-          <form action="/sessions" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="logout">
-          </form>
         <li><a href="/users/<%= current_user.id %>">profile</a></li>
+        <li>
+          <form action="/sessions" method="post" >
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="logout" class="logout-button">
+          </form>
+          </li>
         <% else %>
           <li><a href="/users/new">register</a></li>
           <li><a href="/sessions/new">login</a></li>
         <% end %>
-          <li><a href="/">home</a></li>
 
       </ul>
     </nav>
