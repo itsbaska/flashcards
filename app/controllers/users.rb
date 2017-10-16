@@ -3,14 +3,14 @@ get '/users' do
   erb :'/users/index'
 end
 
-get '/users/:id' do
-  @user = User.find(params[:id])
-  erb :'/users/show'
-end
-
 get '/users/new' do
   @user = User.new
   erb :'/users/new'
+end
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'/users/show'
 end
 
 post '/users' do
