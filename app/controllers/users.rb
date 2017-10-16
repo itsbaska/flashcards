@@ -3,13 +3,10 @@ get '/users' do
   erb :'/users/index'
 end
 
-get '/users/:id' do
-  @user = User.find(params[:id])
-  erb :'/users/show'
-end
 
 get '/users/new' do
-  @user = User.new
+  "Hello"
+  # @user = User.new
   erb :'/users/new'
 end
 
@@ -25,4 +22,9 @@ post '/users' do
     @errors = @user.errors.full_messages
     erb :'/users/new'
   end
+end
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'/users/show'
 end
