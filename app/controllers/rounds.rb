@@ -7,12 +7,14 @@ get '/rounds/:id' do
 end
 
 get '/decks/:id/rounds/new' do
-  @round = Round.new(user_id: current_user.id, deck_id: params[:id])
-  @round.save
-  @round.create_guesses
-
-  redirect "/rounds/#{@round.id}/cards/#{@round.deck.pick_a_card}"
-
+  if session[:user_id]
+    @round = Round.new(user_id: current_user.id, deck_id: params[:id])
+    @round.save
+    @round.create_guesses
+    redirect "/rounds/#{@round.id}/cards/#{@round.deck.pick_a_card}"
+  else
+    redirect "/sessions/new"
+  end
 end
 
 # post '/decks/:id/rounds/new' do

@@ -4,6 +4,7 @@ Deck.destroy_all
 Round.destroy_all
 Guess.destroy_all
 
+
 bar_trivia = [
   { question: "The beaver is the national emblem of which country?",
     answer: "Canada",
@@ -50,3 +51,4 @@ Card.create(bar_trivia)
 Card.create(bar_trivia_2)
 Card.create(halloween_trivia)
 Card.create(halloween_trivia_2)
+
