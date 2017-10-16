@@ -1,9 +1,13 @@
-<div class="question-container">
-  <h2 class="deck-title-card"><%= @round.deck.title %></h2>
-  <h3 class="card-question" ><%= @card.question %></h3>
-</div>
+<% if logged_in? %>
+  <div class="question-container">
+    <h2 class="deck-title-card"><%= @round.deck.title %></h2>
+    <h3 class="card-question" ><%= @card.question %></h3>
+  </div>
 
-<form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post" class="answer-form">
-  <input type="text" name="user_guess">
-  <input type="submit" value="Enter Guess" class="submit-button">
-</form>
+  <form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post" class="answer-form">
+    <input type="text" name="user_guess">
+    <input type="submit" value="Enter Guess" class="submit-button">
+  </form>
+<% else %>
+<h2>Please Login to Play!</h2>
+<% end %>

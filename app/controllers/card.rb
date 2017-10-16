@@ -23,14 +23,5 @@ post '/rounds/:round_id/cards/:id' do
     redirect "/rounds/#{@round.id}"
   else
     erb :"/cards/response"
-  #   next_card = @round.next_card
-  #   redirect "/rounds/#{@round.id}/cards/#{next_card.id}"
   end
-
 end
-
-# post route
-  # increment this cards guesses
-  # check this cards answer
-  # if all guesses are true end round
-  # else redirect to next card

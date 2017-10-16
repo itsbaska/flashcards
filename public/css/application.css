@@ -25,7 +25,7 @@ nav li a {
 }
 
 h1#web-title {
-  font-family: 'Sigmar One', cursive;
+  font-family: 'Sigmar One', sans-serif;
   font-size: 4em;
 }
 
@@ -37,7 +37,9 @@ h1#web-title {
   border-radius: 10px;
   box-shadow: 10px 10px #ffe3c6;
   width: 275px;
-  height: 150px;
+  height: 80px;
+  vertical-align: middle;
+
 }
 
 .error_item {
@@ -47,14 +49,15 @@ h1#web-title {
 
 h3.deck-title {
   font-size: 2em;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 h3.deck-title a {
   text-decoration: none;
-  font-family: 'Sigmar One', cursive;
+  font-family: 'Sigmar One', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px
+  letter-spacing: 2px;
+  vertical-align: middle;
 }
 
 h3.deck-title a:link {
@@ -131,11 +134,10 @@ input[type=submit].submit-button {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-input[type=text] {
+input[type=text], input[type=password], input[type=email] {
   padding: 10px;
   outline: 0;
   border: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-
+  border-radius: 10px;
+  margin: 10px;
 }

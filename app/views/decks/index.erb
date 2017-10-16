@@ -1,5 +1,7 @@
-<% @decks.each do |deck| %>
-
+<% if logged_in? %>
+  <% @decks.each do |deck| %>
   <h3 class="deck-title"><a href="/decks/<%= deck.id %>/rounds/new" ><%= deck.title %></a></h3>
-
+  <% end %>
+<% else %>
+<h3>Please login to play!</h3>
 <% end %>
